@@ -25,9 +25,9 @@ class DatabaseSeeder extends Seeder
         $post = new App\Post;
         $post->title = "{$i}番目の記事";
         $product_i = array_rand($products);
-        $product = $products[$product_i]
+        $product = $products[$product_i];
         $topic_i = array_rand($topics);
-        $topic = $topics[$topic_i]
+        $topic = $topics[$topic_i];
         $post->body = "今日は{$product}の{$topic}について語ります。";
         $post->category_id = ($i % 2) + 1;
         $post->save();
