@@ -10,7 +10,7 @@ class PostController extends Controller
   {
     $query = $request->get('query');
     if (!empty($query)) {
-      $posts = \App\Post::where('body', 'like', "%{$query}%")->orderBy('id', 'desc')->get();
+      $posts = \App\Post::whereRaw('body @@ ?', $query)->orderBy('id', 'desc')->get();
     }
     else {
       $posts = \App\Post::orderBy('id', 'desc')->get();
