@@ -13,7 +13,7 @@ class AddPostsBodyPgroongaIndex extends Migration
      */
     public function up()
     {
-        //
+      DB::statement('CREATE INDEX pgroonga_body_index ON posts USING pgroonga (body);');
     }
 
     /**
@@ -23,6 +23,6 @@ class AddPostsBodyPgroongaIndex extends Migration
      */
     public function down()
     {
-        //
+      DB::statement('DROP INDEX pgroonga_body_index CASCADE;');
     }
 }
