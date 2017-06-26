@@ -13,7 +13,7 @@ class InstallPgroonga extends Migration
      */
     public function up()
     {
-        //
+      DB::statement('CREATE EXTENSION pgroonga');
     }
 
     /**
@@ -23,6 +23,7 @@ class InstallPgroonga extends Migration
      */
     public function down()
     {
-        //
+      DB::statement('DROP EXTENSION pgroonga CASCADE;');
+      DB::statement('DELETE FROM pg_catalog.pg_am WHERE amname = \'pgroonga\';');
     }
 }
