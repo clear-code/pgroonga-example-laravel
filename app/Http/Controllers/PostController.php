@@ -13,7 +13,7 @@ class PostController extends Controller
       $posts = \App\Post::where('body', 'like', "%{$query}%")->orderBy('id', 'desc')->get();
     }
     else {
-    $posts = \App\Post::orderBy('id', 'desc')->get();
+      $posts = \App\Post::orderBy('id', 'desc')->get();
     }
     return \View::make('posts.index')
              ->with('posts', $posts)
