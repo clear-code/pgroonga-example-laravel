@@ -26,10 +26,10 @@ vagrant@homestead:~$ sudo apt-get update
 vagrant@homestead:~$ sudo apt-get install -y -V postgresql-9.5-pgroonga
 ```
 
-Then switch to the `search-with-gproonga` branch.
+Then switch to the `search-with-pgroonga` branch.
 
 ```
-vagrant@homestead:~/Blog$ git checkout search-with-gproonga
+vagrant@homestead:~/Blog$ git checkout search-with-pgroonga
 vagrant@homestead:~/Blog$ php artisan migrate
 ```
 
