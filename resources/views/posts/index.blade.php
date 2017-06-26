@@ -2,7 +2,11 @@
 @section('content')
 
 <div class="page-header">
-  <h1>すべての記事</h1>
+  @if (!(empty($query)))
+    <h1>{{ $query }} の検索結果</h1>
+  @else
+    <h1>すべての記事</h1>
+  @endif
 </div>
 
 @foreach($posts as $post)
