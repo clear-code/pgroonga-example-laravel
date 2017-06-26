@@ -14,7 +14,9 @@
 </head>
 <body>
 
+<div class="col-xs-8 col-xs-offset-1">
 @yield('content')
+</div>
 
 </body>
 </html>
